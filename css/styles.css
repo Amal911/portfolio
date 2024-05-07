@@ -1,36 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script:wght@400..700&display=swap');
 
-:root{
-    --primary-color: #34353a;
-    --secound-color: #30333a;
+:root {
+    --primary-color: #30333a;
+    --secound-color: #34353a;
     --font-off-white: #b5b5b5;
     --font-white: #fff;
-    --orange:#fec86e;
+    --orange: #fec86e;
     --gray: #3d3e41;
 }
 
-body{
-    padding: 0 ;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
     margin: 0;
     font-family: sans-serif;
 }
-hr{
+
+hr {
     margin: 0;
     padding: 0;
 
 }
-h1,h2,h3,h4,h5,h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Black Ops One", system-ui;
-    
+
 }
-section{
+
+section {
     padding: 0 10%;
 }
-.logo h1{
-    font-family:  "Dancing Script", cursive;
+
+.logo h1 {
+    font-family: "Dancing Script", cursive;
     font-size: 2rem;
 }
-#nav{
+
+#nav {
     font-family: "Black Ops One", system-ui;
     display: flex;
     justify-content: space-between;
@@ -41,26 +55,31 @@ section{
     color: var(--font-white);
     align-items: center;
 }
-.menu{
+
+.menu {
     display: flex;
     gap: 20px;
     color: var(--font-off-white);
     overflow: hidden;
 }
-.menu p{
+
+.menu p {
     cursor: pointer;
     transition: color .2s;
     font-weight: 600;
     border: 2px solid var(--primary-color);
 }
-.menu p:hover  {
+
+.menu p:hover {
     color: var(--font-white);
     /* border: 2px solid #fec86e; */
 
 }
+
 .hover-underline-animation {
     position: relative;
-  }
+}
+
 .hover-underline-animation::after {
     content: '';
     position: absolute;
@@ -71,27 +90,29 @@ section{
     background-color: var(--orange);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-  }
-  .hover-underline-animation::after{
+}
+
+.hover-underline-animation::after {
     transform: scaleX(0);
-  }
+}
 
-  .hover-underline-animation:hover::after {
+.hover-underline-animation:hover::after {
     transform: scaleX(1);
-  }
-  .hover-underline-animation:hover::after {
+}
+
+.hover-underline-animation:hover::after {
     transform-origin: bottom left;
-  }
+}
 
 
 
 
-.menu a{
+.menu a {
     all: unset;
     cursor: pointer;
 }
 
-#home{
+#home {
     background-color: var(--primary-color);
     height: 90vh;
     display: flex;
@@ -100,29 +121,32 @@ section{
     justify-content: space-around;
 }
 
-#name{
+#name {
     color: var(--font-white);
     font-size: 2.5rem;
     font-weight: normal;
     margin: 0;
     letter-spacing: 3px;
-    
+
 }
-#name span{
+
+#name span {
     font-size: 3.5rem;
     color: var(--orange);
     font-weight: bold;
 }
-.tagline{
+
+.tagline {
     color: var(--font-white);
     font-size: 1.8rem;
     margin: 0;
     letter-spacing: 2px;
 }
-#home-contact-btn{
+
+#home-contact-btn {
     margin-top: 20px;
     width: 120px;
-    height: 40px;   
+    height: 40px;
     color: var(--orange);
     font-weight: 600;
     background-color: var(--primary-color);
@@ -130,21 +154,23 @@ section{
     border-radius: 10px;
     transition: background-color .5 s;
 }
-#home-contact-btn:hover{
+
+#home-contact-btn:hover {
     background-color: #fff;
 }
 
-#home img{
+#home img {
     border-radius: 30%;
     width: 350px;
     /* height: 350px; */
-    background-size: contain  ;
+    background-size: contain;
     object-fit: contain;
     filter: grayscale(100%) contrast(90%);
     /* mix-blend-mode:multiply; */
     /* filter:contrast(1) brightness(1); */
 }
-#about{
+
+#about {
     /* display: flex;
     justify-content: center;
     flex-direction: column; */
@@ -154,37 +180,43 @@ section{
     padding: 5% 10%;
 }
 
- h2{
+h2 {
     font-size: 2rem;
     color: var(--orange);
 }
-#about-content{
+
+#about-content {
     display: flex;
     line-height: 1.5;
 }
-#about p{
+
+#about p {
     width: 90%;
     position: relative;
     padding-left: 5%;
     font-size: 1.5rem;
 }
-#skills{
-    background-color: var(--secound-color);
+
+#skills {
+    background-color: var(--primary-color);
     padding: 5% 10%;
     color: var(--font-off-white);
 }
-#skills h2,#education h2{
+
+#skills h2,
+#education h2 {
     display: flex;
     justify-content: center;
 }
-.skill-cards{
+
+.skill-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    justify-content: center ;
+    justify-content: center;
 }
 
-.skill-card{
+.skill-card {
     height: 180px;
     width: 18%;
     background-color: var(--gray);
@@ -195,61 +227,68 @@ section{
     flex-shrink: 1;
 }
 
-.skill-card i{
+.skill-card i {
     font-size: 5rem;
-    transition: color .3s,transform .4s;
-}
-.skill-card:hover i{
-    color: var(--orange);
-    transform: scale(1.3) rotateY( 360deg );
+    transition: color .3s, transform .4s;
 }
 
-#experience{
+.skill-card:hover i {
+    color: var(--orange);
+    transform: scale(1.3) rotateY(360deg);
+}
+
+#experience {
     height: 70vh;
     background-color: var(--gray);
     padding: 5% 10%;
     color: var(--font-off-white);
 }
-.exp{
+
+.exp {
     display: flex;
     height: 30vh;
 }
 
-.exp h3{
+.exp h3 {
     margin-bottom: 0;
     color: var(--orange);
 }
-.exp h5{
+
+.exp h5 {
     margin: 5px 0;
 }
-.exp .desc{
+
+.exp .desc {
     height: 0;
     overflow: hidden;
-    transition: height .3s linear ;
+    transition: height .3s linear;
     margin: 0;
 }
+
 .exp:hover .desc {
-    
-        height: 100%;
-        
+
+    height: 100%;
+
 }
 
-.line{
+.line {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px 50px 10px 10px;
     /* transition: all .5s linear ; */
 }
-.line i{
+
+.line i {
     color: var(--orange);
 }
-.exp hr{
+
+.exp hr {
     height: 100%;
     border-color: var(--font-white);
 }
 
-.year{
+.year {
     width: 550px;
     font-family: "Black Ops One", system-ui;
 
@@ -259,20 +298,21 @@ section{
 
 /* EDUCATION */
 
-#education  {
+#education {
     /* height: 100vh; */
     background-color: var(--primary-color);
     padding: 5% 10%;
     color: var(--font-off-white);
 }
 
-#education-cards{
+#education-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5%;
 }
-.education-card{
+
+.education-card {
     display: flex;
     align-items: center;
     gap: 5%;
@@ -282,23 +322,120 @@ section{
     margin: 10px 0;
     padding: 20px;
 }
-.education-card i{
+
+.education-card i {
     font-size: 6rem;
 }
-.education-card h3{
+
+.education-card h3 {
     color: var(--orange);
 }
-.education-card h3,.education-card h5,.education-card p{
+
+.education-card h3,
+.education-card h5,
+.education-card p {
     margin: 5px 0;
 }
-.education-card p{
+
+.education-card p {
     font-size: .8rem;
 }
-.education-card.hover-underline-animation::after{
-    overflow: hidden    ;
+
+.education-card.hover-underline-animation::after {
+    overflow: hidden;
     width: 96%;
     left: 2%;
     height: 10px;
     border-radius: 0 0 50px 50px;
 }
 
+
+/* CONTACT */
+#contact {
+    /* height: 100vh; */
+    background-color: var(--secound-color);
+    padding: 5% 10%;
+    color: var(--font-off-white);
+    text-align: center;
+}
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-card {
+    background-color: var(--gray);
+    width: 30%;
+    height: 30px;
+    margin: 10px 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.contact-card i {
+    font-size: 1.5rem;
+    color: var(--font-off-white);
+}
+
+.contact-card p {
+    color: var(--orange);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 800;
+}
+
+.contact-card a,
+#social a {
+    all: unset;
+    cursor: pointer;
+}
+
+#social {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-hr {
+    width: 100%;
+}
+
+#social hr {
+
+    height: 100%;
+    border-color: var(--orange);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin: 0 5%;
+}
+
+.social-icons i {
+    font-size: 1.8rem;
+    transition: color .3s;
+
+}
+
+.social-icons i:hover {
+    color: var(--orange);
+}
+
+#footer {
+    background-color: var(--primary-color);
+    height: 10vh;
+    padding: 5% 10%;
+    color: var(--orange);
+    text-align: center;
+    letter-spacing: 2px;
+
+}
