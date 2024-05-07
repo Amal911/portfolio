@@ -14,6 +14,11 @@ body{
     margin: 0;
     font-family: sans-serif;
 }
+hr{
+    margin: 0;
+    padding: 0;
+
+}
 h1,h2,h3,h4,h5,h6{
     font-family: "Black Ops One", system-ui;
     
@@ -155,6 +160,7 @@ section{
 }
 #about-content{
     display: flex;
+    line-height: 1.5;
 }
 #about p{
     width: 90%;
@@ -167,7 +173,7 @@ section{
     padding: 5% 10%;
     color: var(--font-off-white);
 }
-#skills h2{
+#skills h2,#education h2{
     display: flex;
     justify-content: center;
 }
@@ -240,6 +246,7 @@ section{
 }
 .exp hr{
     height: 100%;
+    border-color: var(--font-white);
 }
 
 .year{
@@ -249,12 +256,49 @@ section{
 }
 
 
+
+/* EDUCATION */
+
 #education  {
-    height: 100vh;
+    /* height: 100vh; */
     background-color: var(--primary-color);
     padding: 5% 10%;
     color: var(--font-off-white);
 }
 
-
+#education-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+.education-card{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 40%;
+    background-color: var(--gray);
+    border-radius: 30px;
+    margin: 10px 0;
+    padding: 20px;
+}
+.education-card i{
+    font-size: 6rem;
+}
+.education-card h3{
+    color: var(--orange);
+}
+.education-card h3,.education-card h5,.education-card p{
+    margin: 5px 0;
+}
+.education-card p{
+    font-size: .8rem;
+}
+.education-card.hover-underline-animation::after{
+    overflow: hidden    ;
+    width: 96%;
+    left: 2%;
+    height: 10px;
+    border-radius: 0 0 50px 50px;
+}
 
