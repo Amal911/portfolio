@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script:wght@400..700&display=swap');
+
 :root{
     --primary-color: #34353a;
     --secound-color: #30333a;
@@ -12,31 +14,73 @@ body{
     margin: 0;
     font-family: sans-serif;
 }
+h1,h2,h3,h4,h5,h6{
+    font-family: "Black Ops One", system-ui;
+    
+}
 section{
     padding: 0 10%;
 }
+.logo h1{
+    font-family:  "Dancing Script", cursive;
+    font-size: 2rem;
+}
 #nav{
+    font-family: "Black Ops One", system-ui;
     display: flex;
     justify-content: space-between;
     padding: 0 5%;
     background-color: var(--primary-color);
     /* position: sticky ; */
     top: 0;
-    color: var(--font-white)
+    color: var(--font-white);
+    align-items: center;
 }
 .menu{
     display: flex;
     gap: 20px;
     color: var(--font-off-white);
+    overflow: hidden;
 }
 .menu p{
     cursor: pointer;
     transition: color .2s;
     font-weight: 600;
+    border: 2px solid var(--primary-color);
 }
 .menu p:hover  {
     color: var(--font-white);
+    /* border: 2px solid #fec86e; */
+
 }
+.hover-underline-animation {
+    position: relative;
+  }
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--orange);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .hover-underline-animation::after{
+    transform: scaleX(0);
+  }
+
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+  }
+  .hover-underline-animation:hover::after {
+    transform-origin: bottom left;
+  }
+
+
+
+
 .menu a{
     all: unset;
     cursor: pointer;
@@ -86,11 +130,14 @@ section{
 }
 
 #home img{
-    border-radius: 50%;
+    border-radius: 30%;
     width: 350px;
-    height: 350px;
+    /* height: 350px; */
     background-size: contain  ;
     object-fit: contain;
+    filter: grayscale(100%) contrast(90%);
+    /* mix-blend-mode:multiply; */
+    /* filter:contrast(1) brightness(1); */
 }
 #about{
     /* display: flex;
@@ -113,6 +160,7 @@ section{
     width: 90%;
     position: relative;
     padding-left: 5%;
+    font-size: 1.5rem;
 }
 #skills{
     background-color: var(--secound-color);
@@ -143,22 +191,22 @@ section{
 
 .skill-card i{
     font-size: 5rem;
-    transition: color .3s,transform .3s;
+    transition: color .3s,transform .4s;
 }
-.skill-card i:hover{
+.skill-card:hover i{
     color: var(--orange);
-    transform: scale(1.3);
+    transform: scale(1.3) rotateY( 360deg );
 }
 
 #experience{
-    /* height: 100vh; */
+    height: 70vh;
     background-color: var(--gray);
     padding: 5% 10%;
     color: var(--font-off-white);
 }
 .exp{
     display: flex;
-
+    height: 30vh;
 }
 
 .exp h3{
@@ -170,13 +218,14 @@ section{
 }
 .exp .desc{
     height: 0;
-    visibility: hidden;
-    transition: height .5s,visibility .5s ;
+    overflow: hidden;
+    transition: height .3s linear ;
+    margin: 0;
 }
-.exp:hover .desc{
+.exp:hover .desc {
     
         height: 100%;
-        visibility: visible; 
+        
 }
 
 .line{
@@ -184,7 +233,7 @@ section{
     flex-direction: column;
     align-items: center;
     margin: 20px 50px 10px 10px;
-
+    /* transition: all .5s linear ; */
 }
 .line i{
     color: var(--orange);
@@ -194,7 +243,9 @@ section{
 }
 
 .year{
-    width: 450px;
+    width: 550px;
+    font-family: "Black Ops One", system-ui;
+
 }
 
 
