@@ -178,7 +178,7 @@ section {
     height: 85vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     padding-bottom: 5%;
     gap: 30px;
 }
@@ -480,15 +480,42 @@ h2 {
     background-color: var(--gray);
     padding: 5% 10%;
     color: var(--font-off-white);
+
 }
 .project-cards{
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
+.project-card{
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
 
+.project-card img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.project-content{
+    position: absolute;
+    bottom: -100%;
+    background-color: #30333a;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    height: 100%;
+    padding: 20px;
+    /* text-align: center; */
+}
+.project-card:hover .project-content{
+    transform: translateY(0%);
+    bottom: 0;
+}
 
-
+.project-content h5{
+    color: var(--orange);
+}
 ::-webkit-scrollbar {
     width: 8px;
     background-color: rgb(56, 56, 56);
