@@ -16,13 +16,8 @@ html {
 body {
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
-}
-
-hr {
-    margin: 0;
-    padding: 0;
-
+    /* font-family: sans-serif; */
+    font-family: "Poppins", sans-serif;
 }
 
 h1,
@@ -39,12 +34,6 @@ h6 {
 section {
     padding: 0 10%;
 }
-
-/* . {
-    
-    font-size: 2rem;
-} */
-
 #nav {
     font-family: "Black Ops One", system-ui;
     display: flex;
@@ -80,25 +69,6 @@ section {
 
 }
 
-/* .menu {
-    display: flex;
-    gap: 20px;
-    color: var(--font-off-white);
-    overflow: hidden;
-}
-
-.menu p {
-    cursor: pointer;
-    transition: color .2s;
-    font-weight: 600;
-    border: 2px solid var(--primary-color);
-}
-
-.menu p:hover {
-    color: var(--font-white);
-    
-
-} */
 
 .hover-underline-animation {
     position: relative;
@@ -175,11 +145,11 @@ section {
     background-color: var(--primary-color);
     border: 2px solid var(--orange);
     border-radius: 10px;
-    transition: background-color .5 s;
+    transition: background-color .2s;
 }
 
 #home-contact-btn:hover {
-    background-color: var(--font-white);
+    background-color: var(--gray);
 }
 .home-image {
     background-image: url("../assets/blob.png");
@@ -193,8 +163,7 @@ section {
     background-size: contain;
     object-fit: contain;
     filter: grayscale(100%) contrast(90%);
-    /* mix-blend-mode:multiply; */
-    /* filter:contrast(1) brightness(1); */
+
 }
 
   
@@ -818,6 +787,9 @@ section {
 
 .project-content h5 {
     color: var(--orange);
+}
+.project-content p {
+    font-size: .8rem;
 }
 
 #footer a {
